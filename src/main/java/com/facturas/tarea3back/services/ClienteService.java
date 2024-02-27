@@ -14,7 +14,7 @@ public class ClienteService {
     private ClienteRepository clienteRepository;
 
     public List<Cliente> showByUsername(String nombre){
-        return clienteRepository.findByUsername(nombre);
+        return clienteRepository.findByNombre(nombre);
     }
 
 }

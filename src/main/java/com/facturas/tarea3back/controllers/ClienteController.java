@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/clientes")
+@RequestMapping("/api")
 public class ClienteController {
 
     @Autowired
     private ClienteService clienteService;
 
-    @GetMapping("/cliente{nombre}")
+    @GetMapping("/cliente/{nombre}")
     public List<Cliente> mostrarPorUsuario(@PathVariable String nombre){
         return clienteService.showByUsername(nombre);
     }
